@@ -1,8 +1,6 @@
 #pragma once
 
-#include "Squares.h"
-
-using namespace std;
+#define		N	9
 
 class Grid
 {
@@ -10,11 +8,12 @@ public:
 	Grid();
 	~Grid() {}
 
-	void	display();
+	void	printGrid();
 private:
-	void	Row(int);
-	void	Row1();
+	void	fillDiagonal();
+	bool	isSafe(int row, int col, int num);
+	bool	solveSudoku(int row, int col);
 private:
-	unique_ptr<Square>	squares[9];
+	int		grid[N][N];
 };
 

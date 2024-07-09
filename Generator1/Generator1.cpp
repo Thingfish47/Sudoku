@@ -9,9 +9,12 @@ using namespace std;
 
 int main()
 {
-    Grid* grid = new Grid();
-    grid->display();
-    delete grid;
+    srand(time(0));
+    Grid geid = Grid();
+    geid.printGrid();
+    //Grid* grid = new Grid();
+    //grid->printGrid();
+    //delete grid;
 }
 
 
