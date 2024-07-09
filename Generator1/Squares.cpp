@@ -3,6 +3,8 @@
 
 using namespace std;
 
+#pragma	region	Class Square Definition
+
 Square::Square()
 {
 	Random();
@@ -71,4 +73,35 @@ void Square::Row(int Line)
 	}
 	cout << " ";
 }
+#pragma endregion
 
+#pragma region Class LineH definition
+
+LineH::LineH ()
+{
+	memset(Numbers, 0, sizeof(Numbers));
+}
+
+bool LineH::IsValid()
+{
+	bool valid = false;
+
+	return valid;
+}
+#pragma endregion
+
+
+#pragma region Class LineV definition
+
+LineV::LineV ()
+{
+	memset(Numbers, 0, sizeof(Numbers));
+}
+
+bool LineV::IsValid()
+{
+	bool valid = false;
+
+	return valid;
+}
+#pragma endregion
