@@ -3,10 +3,8 @@
 
 using namespace std;
 
-Square::Square(uint8_t iCenter)
+Square::Square()
 {
-	Center = iCenter;
-	Numbers[4] = Center;
 	Random();
 }
 
@@ -22,8 +20,7 @@ void Square::Random()
 		nums[i] = 0;
 		Used[i] = false;
 	}
-	Used[Center - 1] = true;
-	Picked = 1;
+	Picked = 0;
 	std::random_device seed;
 	std::mt19937 gen{ seed() }; // seed the generator
 	std::uniform_int_distribution<> dist{ 1, 9 }; // set min and max
@@ -39,11 +36,11 @@ void Square::Random()
 	//for (int i = 0; i < 9; i++)
 	//	cout << (int) nums[i] << " ";
 	//cout << endl;
-	for (int i = 0; i < 4; i++)
-		Numbers[i] = nums[i+1];
-	Numbers[4] = Center;
-	for (int i = 5; i < 9; i++)
-		Numbers[i] = (int) nums[i];
+	for (int i = 0; i < 9; i++)
+		Numbers[i] = nums[i];
+	//Numbers[4] = Center;
+	//for (int i = 5; i < 9; i++)
+	//	Numbers[i] = (int) nums[i];
 	//display1();
 }
 

@@ -11,5 +11,7 @@ int main()
 {
     Grid* grid = new Grid();
     grid->display();
+    delete grid;
 }
+
 

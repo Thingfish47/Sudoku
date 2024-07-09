@@ -5,7 +5,7 @@ Grid::Grid()
 {
 	for (int i = 0; i < 9; i++)
 	{
-		squares[i].reset(new Square(i + 1));
+		squares[i].reset(new Square());
 		squares[i]->display2();
 	}
 }
